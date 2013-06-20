@@ -54,7 +54,8 @@ chown -R vagrant.vagrant $OMERO_DIR
 sudo -iu postgres createuser -P -D -R -S omero
 sudo -iu postgres createdb -O omero omero
 sudo -iu postgres createlang plpgsql omero
-cd ${OMERO_DIR}
-sudo -iu vagrant bin/omero db script
+#cd ${OMERO_DIR}
+sudo -iu vagrant ${OMERO_DIR}/bin/omero db script
 psql -h localhost -U omero omero < OMERO4.4__0.sql
-
+mkdir -p /OMERO
+chown -R vagrant.vagrant /OMERO
