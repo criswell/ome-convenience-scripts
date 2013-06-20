@@ -51,10 +51,10 @@ fi
 chown -R vagrant.vagrant $OMERO_DIR
 
 # Create DB
-sudo -u postgres createuser -P -D -R -S omero
-sudo -u postgres createdb -O omero omero
-sudo -u postgres createlang plpgsql omero
+sudo -iu postgres createuser -P -D -R -S omero
+sudo -iu postgres createdb -O omero omero
+sudo -iu postgres createlang plpgsql omero
 cd ${OMERO_DIR}
-sudo -u vagrant bin/omero db script
+sudo -iu vagrant bin/omero db script
 psql -h localhost -U omero omero < OMERO4.4__0.sql
 
