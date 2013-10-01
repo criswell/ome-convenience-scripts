@@ -6,7 +6,7 @@ apt-get -y update
 
 apt-get -y install aptitude openjdk-7-jdk python-pip python-scipy python-numpy
 
-apt-get -y install python-zeroc-ice unzip git zeroc-ice libzeroc-ice-dev
+apt-get -y install python-zeroc-ice unzip git zeroc-ice libzeroc-ice-dev icee-translators
 
 apt-get -y install postgresql-9.1 postgresql-server-dev-9.1
 
