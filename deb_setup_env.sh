@@ -10,7 +10,7 @@ export LC_ALL="C"
 
 # Update and install the base requirements
 apt-get -y update
-apt-get -y install vim aptitude openjdk-7-jdk python-pip python-scipy python-numpy wget curl
+apt-get -y install vim aptitude openjdk-7-jdk python-pip python-scipy python-numpy wget curl unzip git
 
 # Install ICE
 wget http://www.zeroc.com/download/RPM-GPG-KEY-zeroc-release
@@ -25,8 +25,9 @@ aptitude -y install ice ice-dev
 
 #apt-get -y install postgresql-9.1 postgresql-server-dev-9.1
 
-#pip install numexpr
-#pip install cython
+# Random pip installs
+pip install numexpr
+pip install cython
 
 #apt-get -y install libhdf5-serial-dev
 #pip install tables
