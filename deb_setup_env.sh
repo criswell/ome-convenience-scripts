@@ -18,7 +18,7 @@ pip install tables
 
 pip install PIL
 
-apt-get -y install libfreetype6-dev libpng-dev libpng++-dev
+apt-get -y install libfreetype6-dev libpng-dev libpng++-dev sudo
 pip install matplotlib
 
 pip install scikits-image
