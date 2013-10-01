@@ -18,4 +18,9 @@ fi
 
 DEST=$1
 
-debootstrap testing ${DEST}
+debootstrap raring ${DEST}
+cp -f sources.list ${DEST}/etc/apt/sources.list
+cp -f deb_setup_env.sh ${DEST}/root/.
+chmod a+x ${DEST}/root/deb_setup_env.sh
+
+chroot ${DEST} /root/deb_setup_env.sh
