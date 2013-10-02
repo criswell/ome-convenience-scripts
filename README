@@ -1,0 +1,8 @@
+To build a working dev/build choort for the OMERO project on a Debian-derived
+system, run:
+
+       ./make_dev_chroot.sh
+
+At some point, it would be nice to add support for other distros (arch should
+be pretty trivial).
+
