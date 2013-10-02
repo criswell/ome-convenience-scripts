@@ -24,3 +24,7 @@ cp -f deb_setup_env.sh ${DEST}/root/.
 chmod a+x ${DEST}/root/deb_setup_env.sh
 
 chroot ${DEST} /root/deb_setup_env.sh
+
+echo "Be sure to do something like:"
+echo "  export SLICEPATH=/usr/share/Ice-3.5.0/slice"
+echo "inside your chroot to be able to build...."
