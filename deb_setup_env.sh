@@ -18,7 +18,7 @@ apt-key add RPM-GPG-KEY-zeroc-release
 
 curl -L http://www.zeroc.com/download/Ice/3.5/ubuntu/ice3.5-raring.list -o /etc/apt/sources.list.d/ice3.5-raring.list
 aptitude -y update
-aptitude -y install ice ice-dev ant
+aptitude -y install ice ice-dev ant zsh postgresql postgresql-client
 
 # Random pip installs
 pip install numexpr

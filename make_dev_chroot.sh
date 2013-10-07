@@ -5,6 +5,8 @@
 PROGNAME=${0##*/}
 MY_CWD=`pwd`
 
+MY_PATH="`dirname \"$0\"`"
+
 if [ "$1" = "" ]; then
     echo "USAGE:"
     echo "${PROGNAME} <DEST-DIRECTORY>"
@@ -19,12 +21,14 @@ fi
 DEST=$1
 
 debootstrap raring ${DEST}
-cp -f sources.list ${DEST}/etc/apt/sources.list
-cp -f deb_setup_env.sh ${DEST}/root/.
+cp -f ${MY_PATH}/sources.list ${DEST}/etc/apt/sources.list
+cp -f ${MY_PATH}/deb_setup_env.sh ${DEST}/root/.
+cp -f ${MY_PATH}/init_env.sh ${DEST}/root/.
 chmod a+x ${DEST}/root/deb_setup_env.sh
 
 chroot ${DEST} /root/deb_setup_env.sh
 
-echo "Be sure to do something like:"
-echo "  export SLICEPATH=/usr/share/Ice-3.5.0/slice"
-echo "inside your chroot to be able to build...."
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo ">> Chroot setup. Run /root/init_env.sh once in chroot to"
+echo ">> initialize the development environment"
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
