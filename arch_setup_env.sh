@@ -13,7 +13,7 @@ pacman-key --populate archlinux
 pacman-key --refresh-keys
 
 # Now the packages
-pacman -Syu --noconfirm jdk7-openjdk python2-scipy python2-numpy wget curl unzip git
+pacman -Syu --noconfirm jdk7-openjdk python2-scipy python2-numpy wget curl unzip git gcc
 
 # Install ICE
 curl -L https://aur.archlinux.org/packages/ze/zeroc-ice/zeroc-ice.tar.gz -o /root/zeroc-ice.tar.gz
