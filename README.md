@@ -7,8 +7,8 @@ Building development/execution chroots
 Currently the chroot builder scripts support the following distributions
 automatically:
 
-    * Debian (and Debian derived such as Ubuntu)
-    * Arch Linux
+* Debian (and Debian derived such as Ubuntu)
+* Arch Linux
 
 
 
@@ -17,7 +17,8 @@ To build a working dev/build chroot for the OMERO project, run:
        ./make_dev_chroot.sh <CHROOT_PATH>
 
 After the chroot is made, you'll likely want to use something like:
-   https://bitbucket.org/criswell/chroot-wrap
+
+* https://bitbucket.org/criswell/chroot-wrap
 
 to manage the chroot itself.
 
