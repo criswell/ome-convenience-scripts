@@ -22,6 +22,12 @@ After the chroot is made, you'll likely want to use something like:
 
 to manage the chroot itself.
 
+Using the scripts in non-chroots
+--------------------------------
+
+The *_setup_env.sh scripts are suitable to run in non-chroot (e.g., host)
+environments, if you don't like building/developing in a chroot.
+
 TODO and notes for future work
 ------------------------------
 
