@@ -25,8 +25,10 @@ to manage the chroot itself.
 Using the scripts in non-chroots
 --------------------------------
 
-The *_setup_env.sh scripts are suitable to run in non-chroot (e.g., host)
+The setup_env.sh scripts are suitable to run in non-chroot (e.g., host)
 environments, if you don't like building/developing in a chroot.
+
+        ./deb_setup_env.sh
 
 TODO and notes for future work
 ------------------------------
