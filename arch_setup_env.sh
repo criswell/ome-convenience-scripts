@@ -14,7 +14,7 @@ pacman-key --refresh-keys
 
 # Now the packages
 pacman -Syu --noconfirm jdk7-openjdk python2-scipy python2-numpy wget \
-    curl unzip git gcc tar gzip
+    curl unzip git gcc tar gzip grep automake make
 
 curl -L https://aur.archlinux.org/packages/ja/java-berkeleydb/java-berkeleydb.tar.gz -o /root/java-berkeleydb.tar.gz
 tar xzvf java-berkeleydb.tar.gz
