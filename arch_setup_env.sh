@@ -15,7 +15,7 @@ pacman-key --refresh-keys
 # Now the packages
 pacman -Syu --noconfirm jdk7-openjdk python2-scipy python2-numpy wget \
     curl unzip git gcc tar gzip grep automake make glib2 file patch \
-    diffutils mcpp php python
+    diffutils mcpp php which
 
 source /etc/profile
 
@@ -35,6 +35,6 @@ pacman -U --noconfirm *.pkg.tar.xz
 
 pacman -Syu --noconfirm apache-ant postgresql
 
-# Final pip installs
-pip install numexpr
-pip install cython
+# Final pip-2.7 installs
+pip-2.7 install numexpr
+pip-2.7 install cython
