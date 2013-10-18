@@ -8,6 +8,9 @@ cd /root
 # file order
 export LC_ALL="C"
 
+dpkg-divert --local --rename --add /sbin/initctl
+ln -s /bin/true /sbin/initctl
+
 # Update and install the base requirements
 apt-get -y update
 apt-get -y install vim aptitude openjdk-7-jdk python-pip python-scipy python-numpy wget curl unzip git
